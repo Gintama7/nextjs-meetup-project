@@ -1,15 +1,25 @@
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import MeetupList from '../components/meetups/MeetupList';
 import { MongoClient } from 'mongodb';
+import Head from 'next/head';
+import { Fragment } from 'react';
 
 
 const HomePage = (props) => {
  
 
   return (
-  
+  <Fragment>
+    <Head>
+      <title>React Meetups</title>
+      <meta
+      name='description' 
+      content='Browse a huge list of highly active React meetups'
+      />
+    </Head>
     <MeetupList meetups={props.meetups} />
+    </Fragment>
   )
 }
 
